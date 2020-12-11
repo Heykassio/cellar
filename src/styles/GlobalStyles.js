@@ -12,6 +12,11 @@ export default createGlobalStyle`
     }
     body, #root {
         height: 100vh;
+        overflow: hidden;
+    }
+
+    body {
+        background-color: #07232b;
     }
 
     a {
@@ -19,10 +24,14 @@ export default createGlobalStyle`
         color: white;
         cursor: pointer;
     }
+
+    h2 {
+        color: black;
+    }
 `;
 
 export const Container= styled.section`
-    max-width: 1280px;
+    /* max-width: 1280px; */
     background-color: ${colorBackground};
     margin: 0 auto;
     height: 100%
