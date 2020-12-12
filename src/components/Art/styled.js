@@ -93,5 +93,8 @@ export const Art = styled.div`
         border-radius: 8px;
     }
 
+    @media(max-width: 900px) {
+        display: none;
+    }
 
 `;

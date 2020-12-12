@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { colorBackground } from '../configs/colors';
+import { colorBackground, colorBackgroundLight } from '../configs/colors';
 export default createGlobalStyle`
 
     * {
@@ -10,13 +10,13 @@ export default createGlobalStyle`
         font-family: 'Lato', sans-serif;
         color: white;
     }
-    body, #root {
+    html, body, #root {
         height: 100vh;
         overflow: hidden;
     }
 
     body {
-        background-color: #07232b;
+        background-color: ${colorBackgroundLight};
     }
 
     a {

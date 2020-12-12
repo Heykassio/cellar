@@ -5,4 +5,8 @@ export const MainContainer = styled.main`
     display: grid;
     grid-template-columns: 1fr 0.65fr;
     height: 100%;
+
+    @media(max-width: 900px){
+        display: flex;
+    }
 `;

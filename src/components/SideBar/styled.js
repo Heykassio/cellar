@@ -17,6 +17,5 @@ export const MenuItem = styled.div`
 
     &:hover {
         color: ${colorHover};
-        background-color: #0b3541;
     }
 `;

@@ -4,7 +4,7 @@ import {Header}  from './styled';
 export default function Head() {
     return (
         <Header>
-                Arca Conveniencia
+                Arca <span>Conveniencia</span> 
         </Header>
     );
 }

@@ -2,16 +2,20 @@ import styled from 'styled-components';
 
 export const LoginForm = styled.div`
     width: 100%;
+    min-width: 410px;
+    min-height: 660px;
     background-color: #020606;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 32px 16px;
+    position: relative;
 
     h2 {
         margin-top: 10vh; //7
         font-size: 60px;
         color: white;
+        z-index: 2;
 
         @media(max-width: 1700px) {
             margin-top: 7vh;
@@ -23,11 +27,13 @@ export const LoginForm = styled.div`
 
     span.sub {
         color: rgba(255,255,255, 0.6);
+        z-index: 2;
     }
 
     form {
         width: 70%;
         margin: 0 auto;
+        z-index: 2;
 
         div.inputs {
             display: flex;
@@ -67,12 +73,32 @@ export const LoginForm = styled.div`
     .help {
         display: flex;
         flex-direction: column;
-        margin-top: 40vh; //32
+        position: absolute;
+        bottom: 16px;
 
-        @media(max-width: 1700px) {
-            margin-top: 32vh;
-        }
     }
 
+    @media(max-width: 900px) {
+        background-image: url(${(props) => props.imgUrl});
+        background-position: center;
+        background-size: cover;
+        overflow: scroll;
+
+        &:before {
+            content: '';
+            width: 75%;
+            max-height: 370px;
+            height: 60%;
+            position: absolute;
+            top: 10vh;
+            /* top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0; */
+            background-color: black;
+            border-radius: 8px;
+            opacity: 40%;
+        }
+    }
 
 `;

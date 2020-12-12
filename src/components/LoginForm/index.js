@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { baseUrl } from '../../../config';
+import { baseUrl } from '../../config';
 import { LoginForm } from './styled';
 
 
@@ -49,7 +49,7 @@ export default function Form() {
         }
     }
     return (
-        <LoginForm>
+        <LoginForm imgUrl={process.env.PUBLIC_URL + '/img/backgroundlogindis.jpg'}>
             <h2>Cell<span>ar</span></h2>
             <span className="sub">Faça Login usando suas credenciais</span>
             <form action="" onSubmit={handleSubmit}>
