@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
+import { baseUrl } from '../../../config';
 import { LoginForm } from './styled';
 
 
@@ -22,7 +23,7 @@ export default function Form() {
         const password = e.target.querySelector('#password').value;
 
         try {
-            const response = await fetch('https://api-arca.heykassio.com/login', {
+            const response = await fetch(`${baseUrl}/login`, {
             credentials: 'include',
             method: 'POST',
             headers: {
